@@ -1,0 +1,69 @@
+overlay: 1.0.0
+info:
+  title: Speakeasy Modifications
+  version: 0.0.2
+  x-speakeasy-metadata:
+    after: ""
+    before: ""
+    type: speakeasy-modifications
+actions:
+  - target: $["paths"]["/v0/apps/{app}"]["get"]
+    update:
+      x-speakeasy-group: apps
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.<no_group>.getApp()
+      after: sdk.apps.get()
+      reviewed_at: 1729169536736
+      created_at: 1729169481440
+  - target: $["paths"]["/v0/logs/cron"]["get"]
+    update:
+      x-speakeasy-group: logs
+      x-speakeasy-name-override: getCron
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.<no_group>.getCronLogs()
+      after: sdk.logs.getCron()
+      reviewed_at: 1729169536736
+      created_at: 1729169481440
+  - target: $["paths"]["/v0/logs/http"]["get"]
+    update:
+      x-speakeasy-group: logs
+      x-speakeasy-name-override: getHttp
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.<no_group>.getHttpLogs()
+      after: sdk.logs.getHttp()
+      reviewed_at: 1729169536736
+      created_at: 1729169481440
+  - target: $["paths"]["/v0/logs/console"]["get"]
+    update:
+      x-speakeasy-group: logs
+      x-speakeasy-name-override: getConsole
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.<no_group>.getConsoleLogs()
+      after: sdk.logs.getConsole()
+      reviewed_at: 1729169536736
+      created_at: 1729169481440
+  - target: $["paths"]["/v0/run/{app}"]["post"]
+    update:
+      x-speakeasy-group: apps
+      x-speakeasy-name-override: run
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.<no_group>.runApp()
+      after: sdk.apps.run()
+      reviewed_at: 1729169536736
+      created_at: 1729169481440
+  - target: $["paths"]["/v0/apps"]["get"]
+    update:
+      x-speakeasy-group: apps
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      type: method-name
+      before: sdk.<no_group>.getApps()
+      after: sdk.apps.list()
+      reviewed_at: 1729169536736
+      created_at: 1729169481440

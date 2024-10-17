@@ -1,0 +1,14 @@
+workflowVersion: 1.0.0
+speakeasyVersion: latest
+sources:
+    smallweb-OAS:
+        inputs:
+            - location: https://assets.smallweb.run/openapi.json
+        overlays:
+            - location: .speakeasy/speakeasy-modifications-overlay-1.yaml
+        registry:
+            location: registry.speakeasyapi.dev/smallweb/smallweb/smallweb-oas
+targets:
+    smallweb:
+        target: typescript
+        source: smallweb-OAS

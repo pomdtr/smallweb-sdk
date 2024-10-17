@@ -1,0 +1,143 @@
+lockVersion: 2.0.0
+id: f8a9398d-854a-405a-ad4b-0b0ab46e0dc9
+management:
+  docChecksum: 8aa6cb79647a92046335fb026d917159
+  docVersion: "0"
+  speakeasyVersion: 1.419.0
+  generationVersion: 2.438.3
+  releaseVersion: 0.3.0
+  configChecksum: 544fc962cf6c61fdba872c07b7b6978e
+features:
+  typescript:
+    acceptHeaders: 2.81.2
+    additionalDependencies: 0.1.0
+    core: 3.18.2
+    defaultEnabledRetries: 0.1.0
+    devContainers: 2.90.0
+    downloadStreams: 0.1.1
+    envVarSecurityUsage: 0.1.1
+    globalSecurityCallbacks: 0.1.0
+    globalServerURLs: 2.82.4
+    groups: 2.81.2
+    nameOverrides: 2.81.2
+    responseFormat: 0.2.3
+    retries: 2.83.0
+    sdkHooks: 0.1.0
+generatedFiles:
+  - .devcontainer/README.md
+  - .devcontainer/devcontainer.json
+  - .devcontainer/setup.sh
+  - .eslintrc.cjs
+  - .gitattributes
+  - .npmignore
+  - CONTRIBUTING.md
+  - FUNCTIONS.md
+  - RUNTIMES.md
+  - USAGE.md
+  - docs/lib/utils/retryconfig.md
+  - docs/models/components/app.md
+  - docs/models/components/commandoutput.md
+  - docs/models/components/manifest.md
+  - docs/models/operations/getapprequest.md
+  - docs/models/operations/getconsolelogsrequest.md
+  - docs/models/operations/getcronlogsrequest.md
+  - docs/models/operations/gethttplogsrequest.md
+  - docs/models/operations/runapprequest.md
+  - docs/models/operations/runapprequestbody.md
+  - docs/models/operations/runappresponse.md
+  - docs/sdks/apps/README.md
+  - docs/sdks/logs/README.md
+  - docs/sdks/smallweb/README.md
+  - jsr.json
+  - package.json
+  - src/core.ts
+  - src/funcs/appsGet.ts
+  - src/funcs/appsList.ts
+  - src/funcs/appsRun.ts
+  - src/funcs/logsGetConsole.ts
+  - src/funcs/logsGetCron.ts
+  - src/funcs/logsGetHttp.ts
+  - src/hooks/hooks.ts
+  - src/hooks/index.ts
+  - src/hooks/types.ts
+  - src/index.ts
+  - src/lib/base64.ts
+  - src/lib/config.ts
+  - src/lib/dlv.ts
+  - src/lib/encodings.ts
+  - src/lib/env.ts
+  - src/lib/files.ts
+  - src/lib/http.ts
+  - src/lib/is-plain-object.ts
+  - src/lib/logger.ts
+  - src/lib/matchers.ts
+  - src/lib/primitives.ts
+  - src/lib/retries.ts
+  - src/lib/schemas.ts
+  - src/lib/sdks.ts
+  - src/lib/security.ts
+  - src/lib/url.ts
+  - src/models/components/app.ts
+  - src/models/components/commandoutput.ts
+  - src/models/components/index.ts
+  - src/models/errors/httpclienterrors.ts
+  - src/models/errors/index.ts
+  - src/models/errors/sdkerror.ts
+  - src/models/errors/sdkvalidationerror.ts
+  - src/models/operations/getapp.ts
+  - src/models/operations/getconsolelogs.ts
+  - src/models/operations/getcronlogs.ts
+  - src/models/operations/gethttplogs.ts
+  - src/models/operations/index.ts
+  - src/models/operations/runapp.ts
+  - src/sdk/apps.ts
+  - src/sdk/index.ts
+  - src/sdk/logs.ts
+  - src/sdk/sdk.ts
+  - src/types/blobs.ts
+  - src/types/constdatetime.ts
+  - src/types/enums.ts
+  - src/types/fp.ts
+  - src/types/index.ts
+  - src/types/operations.ts
+  - src/types/rfcdate.ts
+  - src/types/streams.ts
+  - tsconfig.json
+examples:
+  getApps:
+    speakeasy-default-get-apps:
+      responses:
+        "200":
+          application/json: [{"name": "<value>", "url": "https://ugly-season.org"}]
+  getApp:
+    speakeasy-default-get-app:
+      parameters:
+        path:
+          app: "<value>"
+      responses:
+        "200":
+          application/json: {"name": "<value>", "url": "https://experienced-dress.org"}
+  getCronLogs:
+    speakeasy-default-get-cron-logs:
+      responses:
+        "200":
+          application/octet-stream: "<value>"
+  getHttpLogs:
+    speakeasy-default-get-http-logs:
+      responses:
+        "200":
+          application/octet-stream: "<value>"
+  getConsoleLogs:
+    speakeasy-default-get-console-logs:
+      responses:
+        "200":
+          application/octet-stream: "<value>"
+  runApp:
+    speakeasy-default-run-app:
+      parameters:
+        path:
+          app: "<value>"
+      responses:
+        "200":
+          application/json: {"success": true, "code": 913495, "stdout": "<value>", "stderr": "<value>"}
+          text/plain: "<value>"
