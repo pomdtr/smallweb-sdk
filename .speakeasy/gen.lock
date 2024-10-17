@@ -7,6 +7,7 @@ management:
   generationVersion: 2.438.3
   releaseVersion: 0.3.0
   configChecksum: 544fc962cf6c61fdba872c07b7b6978e
+  published: true
 features:
   typescript:
     acceptHeaders: 2.81.2

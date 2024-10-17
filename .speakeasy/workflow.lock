@@ -2,7 +2,7 @@ speakeasyVersion: 1.419.0
 sources:
     smallweb-OAS:
         sourceNamespace: smallweb-oas
-        sourceRevisionDigest: sha256:69a744d73428688c7bfd67e902f0575610c35775c9a82c9a85ae82330f95341b
+        sourceRevisionDigest: sha256:42bc8c66c1a38be015b470da7eb196a2bbfe99130ba34885ba7af30d6904a184
         sourceBlobDigest: sha256:e9831d7c976eba799afd069b5a97b4a150f804fcae844e5de68efdf4f24177cd
         tags:
             - latest
@@ -10,7 +10,7 @@ targets:
     smallweb:
         source: smallweb-OAS
         sourceNamespace: smallweb-oas
-        sourceRevisionDigest: sha256:69a744d73428688c7bfd67e902f0575610c35775c9a82c9a85ae82330f95341b
+        sourceRevisionDigest: sha256:42bc8c66c1a38be015b470da7eb196a2bbfe99130ba34885ba7af30d6904a184
         sourceBlobDigest: sha256:e9831d7c976eba799afd069b5a97b4a150f804fcae844e5de68efdf4f24177cd
 workflow:
     workflowVersion: 1.0.0
@@ -27,3 +27,6 @@ workflow:
         smallweb:
             target: typescript
             source: smallweb-OAS
+            publish:
+                npm:
+                    token: $npm_token
