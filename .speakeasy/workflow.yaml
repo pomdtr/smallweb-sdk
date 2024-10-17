@@ -12,3 +12,6 @@ targets:
     smallweb:
         target: typescript
         source: smallweb-OAS
+        publish:
+            npm:
+                token: $npm_token
