@@ -1,5 +1,5 @@
 import { Hono } from "npm:hono@4.7.8"
-import { Smallweb } from "./pkg/mod.ts"
+import Smallweb from "./pkg/mod.ts"
 
 const smallweb = new Smallweb("./data")
 

@@ -168,3 +168,4 @@ export class SmallwebApps {
     }
 }
 
+export default Smallweb
